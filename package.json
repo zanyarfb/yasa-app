@@ -23,6 +23,7 @@
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "deprecated-react-native-prop-types": "^4.2.1",
+    "dotenv": "^16.4.5",
     "expo": "^49.0.20",
     "expo-font": "~11.4.0",
     "expo-status-bar": "~1.6.0",
