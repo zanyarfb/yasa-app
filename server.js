@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 const DB = mysql.createConnection({
     host:"localhost",
-    port:3305,
+    port:8081,
     user:"root",
     password:"",
     database:"yasa_final_test",
