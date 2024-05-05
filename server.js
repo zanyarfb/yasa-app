@@ -13,27 +13,33 @@ app.use(cors());
 app.use(bodyParser.json({type:'application/json'}))
 app.use(bodyParser.urlencoded({extended:true}))
 
-// const DB = mysql.createConnection({
-//     host:"localhost",
-//     port:8081,
-//     user:"root",
-//     password:"",
-//     database:"yasa_final_test",
+const DB = mysql.createConnection({
+    host:"zandatabase.chu8ssoia4kz.ap-south-1.rds.amazonaws.com",
+    
+    user:"admin",
+    password:"z123451998z",
+    database:"yasa_database",
 
-//     queryFormat: function(query, values){
-//         if(!values) return query;
-//         return query.replace(
-//             /\:(\w+)/g,
-//             function(txt,key){
-//                 if(values.hasOwnProperty(key)){
-//                     return this.escape(values[key]);
-//                 }
-//                 return txt
-//             }.bind(this)
-//         )
-//     }
-// })
-
+    queryFormat: function(query, values){
+        if(!values) return query;
+        return query.replace(
+            /\:(\w+)/g,
+            function(txt,key){
+                if(values.hasOwnProperty(key)){
+                    return this.escape(values[key]);
+                }
+                return txt
+            }.bind(this)
+        )
+    }
+})
+DB.connect((err) => {
+  if (err) {
+    console.error('Error connecting to database:', err);
+    return;
+  }
+  console.log('Connected to database');
+});
 
 app.get('/', (req,res)=>{
     return res.json("from backend side");
