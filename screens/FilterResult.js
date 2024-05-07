@@ -27,7 +27,7 @@ const fetchData = async()=>{
 setIsLoading(true)
 try{
 
-const response = await fetch(`http://192.168.1.5:8085/lawyers-search-filter?city=${selectedCityR}&gender=${selectedGenderR}&type=${selectedCategoryR}`)
+const response = await fetch(`https://api.yasa-app.com/lawyers-search-filter?city=${selectedCityR}&gender=${selectedGenderR}&type=${selectedCategoryR}`)
 const result = await response.json()
 
 setDbase(result)

@@ -16,7 +16,7 @@ const InstPublishPubPage = () => {
   const fetchData = async()=>{
     setIsLoading(true)
     try{
-      const response = await fetch('http://192.168.1.8:8085/popular_question-home')
+      const response = await fetch('https://api.yasa-app.com/popular_question-home')
       const result = await response.json()
     
       setDbase(result)

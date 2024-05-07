@@ -31,7 +31,7 @@ const SearchOption = () => {
   setIsLoading(true)
   try{
     setSearch(text)
-    const response = await fetch(`http://192.168.1.6:8085/lawyers-search-type?name=${text}`)
+    const response = await fetch(`https://api.yasa-app.com/lawyers-search-type?name=${text}`)
     const result = await response.json()
   
     setDbase(result)

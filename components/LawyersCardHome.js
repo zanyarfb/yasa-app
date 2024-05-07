@@ -22,7 +22,7 @@ const LawyersCardHome = () => {
 const fetchData = async()=>{
 setIsLoading(true)
 try{
-  const response = await fetch('http://192.168.1.7:8085/lawyer-home')
+  const response = await fetch('https://api.yasa-app.com/lawyer-home')
   const result = await response.json()
 
   setDbase(result)

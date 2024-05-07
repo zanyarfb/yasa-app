@@ -19,7 +19,7 @@ const TwezhinawayzanstyHome = () => {
   const fetchData = async()=>{
     setIsLoading(true)
     try{
-      const response = await fetch('http://192.168.1.8:8085/research_uni-home')
+      const response = await fetch('https://api.yasa-app.com/research_uni-home')
       const result = await response.json()
     
       setDbase(result)

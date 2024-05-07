@@ -33,7 +33,7 @@ const fetchData = async()=>{
 setIsLoading(true)
 try{
 
-const response = await fetch(`http://192.168.1.6:8085/lawyers-fbch?city=${selectedCity}`)
+const response = await fetch(`https://api.yasa-app.com/lawyers-fbch?city=${selectedCity}`)
 const result = await response.json()
 
 setDbase(result)
